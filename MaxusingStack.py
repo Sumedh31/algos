@@ -19,8 +19,9 @@ class StackWithMax:
             return
         if(x>self.trackStack[-1]):
             self.trackStack.append(x)
-        else:
-            self.trackStack.append(self.trackStack[-1])
+#         else:
+#             self.trackStack.append(self.trackStack[-1])
+        
     def getMax(self):
         return self.trackStack[-1]
 if __name__ == '__main__': 
@@ -32,5 +33,6 @@ if __name__ == '__main__':
     s.Push(20)
     
     s.Push(50)
+    s.Push(70)
       
     print(s.getMax())     
