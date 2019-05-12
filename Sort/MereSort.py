@@ -32,6 +32,7 @@ def MergeSort(arr):
     return arr
 if __name__ == '__main__':
     array=[1,3,7,3,76,34,23,45]
+    #array=[2, 5, 4, 3, 7, 9, 1, 6]
       
     result=MergeSort(array)
     print(result)

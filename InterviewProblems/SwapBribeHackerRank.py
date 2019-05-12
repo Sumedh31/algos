@@ -3,7 +3,7 @@ testcases = int(input())
 for cases in range(testcases):
     NoOFInput = int(input())
     DetailsOfQueue = list(map(int, input().split()))
-	swaps = [0] * NoOFInput
+    swaps = [0] * NoOFInput
 
     swapped = True
 
