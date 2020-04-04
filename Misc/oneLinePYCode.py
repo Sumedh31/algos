@@ -19,5 +19,6 @@
 #         cnt+=(((leng-1)*leng//2))
 #         
 # print(cnt)
-x=0
-print(sum(x+numbers for numbers in range(10) if numbers%2==0))
+#x=0
+#print(sum(x+numbers for numbers in range(10) if numbers%2==0))
+print(25//2)

@@ -17,24 +17,45 @@ Created on 12-May-2019
 # 
 # Attention: If the number has leading zeros the number of digits should be considered.
 
-def stringIncrement(word):
-    l = len(word)
-    move = 0
-    numbers = '0123456789'
-    found = False
-    
-    while not found and move > -l:
-        c = word[l+move-1]
-        if c in numbers:
-            move -= 1
-            continue
-        else:
-            found = True
-    part1,part2 = word[:move], int(word[move:])
-    
-    
-    return part1+part2+'1'
+# def stringIncrement(word):
+#     l = len(word)
+#     move = 0
+#     numbers = '0123456789'
+#     found = False
+#     
+#     while not found and move > -l:
+#         c = word[l+move-1]
+#         if c in numbers:
+#             move -= 1
+#             continue
+#         else:
+#             found = True
+#     part1,part2 = word[:move], int(word[move:])
+#     
+#     
+#     return part1+part2+'1'
+# 
+# if __name__ == '__main__':
+#     word='foo'
+#     Result=stringIncrement(word)
 
-if __name__ == '__main__':
-    word='foo'
-    Result=stringIncrement(word)
+#foo23bar
+
+inString=input()
+numbers='0123456789'
+keepmoving=0
+finalstring=''
+for i in range(len(inString)-1,0,-1):
+    if(inString[i] in numbers):
+        keepmoving=i
+    else:
+        keepmoving=0
+if(keepmoving==0):
+    finalstring=inString.join('1')
+else:
+    justString=inString[0:keepmoving]
+    splitedString=inString[keepmoving:len(inString)]
+    number=int(splitedString)
+    finalnumber=number+1
+    finalstring=justString.join(finalnumber)
+print(finalstring)

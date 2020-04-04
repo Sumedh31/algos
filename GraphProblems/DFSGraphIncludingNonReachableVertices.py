@@ -9,11 +9,11 @@ class Graph():
         self.graph=defaultdict(list)
     def addEdge(self,u,v):
         self.graph[u].append(v)
-    def DFSTraverse(self,v,visited):
-        visited[v]=True
-        print(v)
+    def DFSTraverse(self,vertice,visited):
+        visited[vertice]=True
+        print(vertice)
         
-        for I in self.graph[v]:
+        for I in self.graph[vertice]:
             if(visited[I]==False):
                 self.DFSTraverse(I, visited)
         
@@ -22,9 +22,9 @@ class Graph():
         Vertices=len(self.graph)
         visited=[False]*Vertices
         
-        for I in range(Vertices):
-            if(visited[I]==False):
-                self.DFSTraverse(I,visited)
+        for vertice in range(Vertices):
+            if(visited[vertice]==False):
+                self.DFSTraverse(vertice,visited)
 if __name__ == '__main__':
     g = Graph() 
     g.addEdge(0, 1) 

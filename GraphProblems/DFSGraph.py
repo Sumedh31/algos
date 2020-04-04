@@ -12,11 +12,11 @@ class Graph():
     def Addedge(self,u,v):
         self.graph[u].append(v)
     
-    def DFSTraversal(self,v,visited):
+    def DFSTraversal(self,u,visited):
         #We will mark the current node as visited
-        visited[v]=True
-        print(v)
-        for I in self.graph[v]:
+        visited[u]=True
+        print(u)
+        for I in self.graph[u]:
             if(visited[I]==False):
                 self.DFSTraversal(I, visited)              
                 
