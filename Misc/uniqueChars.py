@@ -19,6 +19,7 @@ if __name__ == '__main__':
     inputString=input()
     listInput=[]
     for char in inputString:
-        listInput.append(char)
-    printUniqueChars(listInput)
+        if char not in listInput:
+            listInput.append(char)
+    print(listInput)
         

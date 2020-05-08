@@ -11,5 +11,5 @@ def substrings(s,n):
 if __name__=='__main__':
     str1='abcd'
     print(len(str1))
-    print(str1[0:3])
+    print(str1[0:4])
     substrings(str1, len(str1))
