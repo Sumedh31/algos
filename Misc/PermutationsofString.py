@@ -24,7 +24,7 @@ def getPermutations(inputstr,currentstep):
     if(currentstep==len(inputstr)):
         #allPerm.append(inputstr)
         print("".join(inputstr))
-    for i in range(currentstep,len(inputstr)):
+    for i in range(currentstep,len(str)):
         getChar=[char for char in inputstr]
         print("The current string array is",getChar, " index is ", i ," Currentstep",currentstep,"swapping", getChar[currentstep],"with", getChar[i])
         temp=getChar[currentstep]
