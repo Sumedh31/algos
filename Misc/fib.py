@@ -3,7 +3,7 @@ Created on 11-Jun-2019
 
 @author: Sumedh.Tambe
 '''
-numberFib=int(input())
+numberFib=int(input("Give number =  "))
 
 a=0
 b=1

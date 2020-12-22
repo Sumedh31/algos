@@ -41,15 +41,17 @@ Created on 12-May-2019
 
 #foo23bar
 
-inString=input()
+inString="fooba1r23"
 numbers='0123456789'
 keepmoving=0
 finalstring=''
 for i in range(len(inString)-1,0,-1):
     if(inString[i] in numbers):
         keepmoving=i
-    else:
-        keepmoving=0
+    if(inString[i].isalpha()):
+        break
+#     else:
+#         keepmoving=0
 if(keepmoving==0):
     finalstring=inString.join('1')
 else:
@@ -57,5 +59,5 @@ else:
     splitedString=inString[keepmoving:len(inString)]
     number=int(splitedString)
     finalnumber=number+1
-    finalstring=justString.join(finalnumber)
+    finalstring=justString+str(finalnumber)
 print(finalstring)

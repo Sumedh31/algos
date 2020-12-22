@@ -31,8 +31,9 @@ if __name__ == '__main__':
     s.Push(60) 
       
     s.Push(20)
+    s.Push(70)
     
     s.Push(50)
-    s.Push(70)
+    
       
     print(s.getMax())     

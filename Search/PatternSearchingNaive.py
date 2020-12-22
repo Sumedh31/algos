@@ -13,6 +13,8 @@ def Search(pat,txt):
                 break
         if(j==M-1):
             print("Pattern found at index ", i)
+    else:
+        print("no pattern")
             
 
 
