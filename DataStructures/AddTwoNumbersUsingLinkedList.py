@@ -53,6 +53,9 @@ class Solution(object):
             q=q.next if q!=None else None
         if(carry>0):
             current.next=ListNode(carry)
+        while(dummyhead):
+            print(dummyhead.val)
+            dummyhead=dummyhead.next
         return dummyhead.next
             
 if __name__=='__main__':
@@ -64,6 +67,7 @@ if __name__=='__main__':
     l2=linkedlistobj2.GetHead(list2)
     sln1=Solution()
     sln1.addTwoNumbers(l1, l2)
+    
         
     
         
