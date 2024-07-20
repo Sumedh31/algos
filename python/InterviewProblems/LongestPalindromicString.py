@@ -56,4 +56,29 @@ def expandFromCenter( s, start_index:int, end_index:int):
 
 
 print(longestPalindrome('baddad'))
-#print(longestPalindrome('baba'))
+print(longestPalindrome('babb'))
+print(longestPalindrome('baba'))
+def longest_palindrome(s):
+    long_pal = ""
+    for i in range(len(s)):
+        # find odd length palindrome
+        left, right = i, i
+        while left > 0 and right < len(s) and s[left] == s[right]:
+            left -= 1
+            right += 1
+        if len(long_pal) < right - (left+1):
+            long_pal = s[left+1: right]
+
+        # find even length palindrome
+        left, right = i, i+1
+        while left > 0 and right < len(s) and s[left] == s[right]:
+            left -= 1
+            right += 1
+        if len(long_pal) < right - (left+1):
+            long_pal = s[left+1: right]
+    return long_pal
+
+print(longest_palindrome('baddad'))
+
+
+

@@ -100,3 +100,23 @@ if __name__=='__main__':
     lengh=Solution().lengthOfLongestSubstring(s)
     print(lengh)
 
+
+def long(s):
+    long_str =""
+    start, end = 0, 0
+    char_set = set()
+    while end < len(s):
+        if s[end] not in char_set:
+            char_set.add(s[end])
+            end+=1
+        else:
+            if end -start > len(long_str):
+                long_str =  s[start: end]
+            char_set.remove(s[start])
+            start += 1
+    if end - start > len(long_str):
+        long_str = s[start:end]
+    return long_str
+
+print(f"and is {long('abcabcbb')}")
+
