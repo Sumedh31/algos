@@ -39,3 +39,31 @@
 
 //    }
 //}
+
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+
+namespace DotNetProblems.SmallProblems {
+    class SecondLowest{
+        public static int GetSecondLowest(int[] arr){
+            int lowest =1000;
+            int secondLowest = 1000;
+            foreach(int num in arr){
+                if(num < lowest){
+                    secondLowest = lowest;
+                    lowest = num;
+                }
+                else if (num < secondLowest && num > lowest) {
+                    secondLowest = num;
+                }
+            }
+
+            return secondLowest;
+        }
+
+        public static void Main(String[] args) {
+        }  
+    }
+
+}

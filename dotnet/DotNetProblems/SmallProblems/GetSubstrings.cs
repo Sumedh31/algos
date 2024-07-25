@@ -8,31 +8,23 @@ namespace Practicecoding.Misc
 {
     class GetSubstrings
     {
-        GetSubstrings()
-        {
-
-        }
-        static void Init()
-        {
-            var str = "ABCD";
-            GetSubstrings obj = new GetSubstrings();
-            obj.GetSubStrings(str, str.Length);
-
-        }
-        void GetSubStrings(String str, Int32 len)
-        {
-            int substringLen = len;
-            for (int i = 0; i < len; i++)
-            {
-
-                for (int j = 1; j <= substringLen; j++)
-                {
-                    var newstr = str.Substring(i, j);
-                    Console.WriteLine(str.Substring(i, j));
+        public static void GetSubStrings(string str){
+            for(int i =0; i< str.Length; i++) {
+                for(int j=i; j<str.Length; j++){
+                    Console.WriteLine("Substring "+str.Substring(i,j-i+1));
+                    char[] arr = str.Substring(i,j-i+1).ToCharArray();
+                    Array.Reverse(arr);
+                    if(!str.Substring(i,j-i+1).Equals(new string(arr))){
+                        Console.WriteLine("Substring "+new string(arr));
+                    }
+                    
                 }
-                substringLen -= 1;
-
             }
+        }
+
+        public static void Main(){
+
+            GetSubStrings("ABC");
         }
     }
 }
