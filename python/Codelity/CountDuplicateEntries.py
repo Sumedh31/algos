@@ -46,7 +46,8 @@ filled_stars = int(rounded_rating * 2)
 empty_stars = 10 - filled_stars
 
 # Construct the output string
-output_str = "half " * int(filled_stars % 2 == 1) + "empty " * int(empty_stars / 2)
+output_str = "filled "* int(filled_stars) +"half " * int(filled_stars % 2 == 1) + "empty " * int(empty_stars / 2)
 
 # Print the output string
 print(output_str)
+print(3//2)
